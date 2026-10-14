@@ -1,0 +1,11 @@
+
+services:
+  app:
+    build: .
+    container_name: devsprint-task-manager
+    ports:
+      - "${PORT:-5000}:${PORT:-5000}"
+    environment:
+      APP_NAME: "${APP_NAME:-DevSprint Task Manager}"
+      PORT: "${PORT:-5000}"
+    restart: unless-stopped
